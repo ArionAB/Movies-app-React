@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { CardList} from './Components/card-list/card-list.comp'
+import { SearchBox } from './Components/Search-Box/search-box.component';
 import './App.css'
-
 
 class App extends Component {
   constructor() {
@@ -30,12 +30,12 @@ render() {
 
   return (
     <div className='App'>
-    <input type='search' 
-          placeholder='search movies, genre or year' 
-          onChange={ e => this.setState({ searchField: e.target.value } )  }
-          />
-    <CardList filme={ filteredFilme }>
-    </CardList>
+    
+    <SearchBox
+    placeholder='search movies, genre or year'
+    handleChange={ e => this.setState({ searchField: e.target.value } ) }
+    />
+    <CardList filme={ filteredFilme }/>
    
       
       </div>
