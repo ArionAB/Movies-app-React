@@ -1,0 +1,16 @@
+.card-comp {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 33%;
+    flex-wrap: wrap;
+    
+    color: white;
+    cursor: pointer;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.25s ease-out;
+    
+}
+

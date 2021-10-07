@@ -1,0 +1,39 @@
+.card-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5%;
+    margin: 2.5% 5%;
+    flex-wrap: wrap;
+    
+    
+}
+
+h1 {
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15em;
+    height: 17em;
+    align-items: center;
+}
+
+h2 {
+    font-size: 0.6em;
+}
+
+h3 {
+    font-size: 0.6em;
+    border: 1px solid white;
+    padding: 0.5em;
+    
+}
+
+body {
+    background-image: linear-gradient(147deg, #000000 0%, #0f2031 74%);
+}
+
+img {
+    width: 10em;
+    height: 12em;
+}
