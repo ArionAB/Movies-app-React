@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { CardList} from './Components/card-list/card-list.comp'
+import './App.css'
 
 
 class App extends Component {
@@ -19,13 +20,21 @@ componentDidMount() {
   .then(movies => this.setState({ filme: movies.results }))
 }
 render() {
+  const {filme, searchField } = this.state;
+  const filteredFilme = filme.filter(film => 
+    film.Title.toLowerCase().includes(searchField.toLowerCase()) 
+    || film.Genre.toLowerCase().includes(searchField.toLowerCase())
+    || film.Year.toLowerCase().includes(searchField.toLowerCase())
+    
+    )
+
   return (
     <div className='App'>
     <input type='search' 
-          placeholder='search movies' 
-          onChange={ e => this.setState({ searchField: e.target.value }) }>
-          </input>
-    <CardList filme={ this.state.filme }>
+          placeholder='search movies, genre or year' 
+          onChange={ e => this.setState({ searchField: e.target.value } )  }
+          />
+    <CardList filme={ filteredFilme }>
     </CardList>
    
       
